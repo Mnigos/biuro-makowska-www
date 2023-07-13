@@ -1,0 +1,28 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "rules": {
+    "no-duplicate-selectors": null,
+    "declaration-block-trailing-semicolon": null,
+    "no-descending-specificity": null,
+    "number-max-precision": 5,
+    "font-family-no-missing-generic-family-keyword": [
+      true,
+      {
+        "ignoreFontFamilies": ["PrimeIcons"]
+      }
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["placeholder", "input-placeholder"]
+      }
+    ],
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": ["placeholder", "input-placeholder"]
+      }
+    ],
+    "selector-class-pattern": "[A-Za-z]"
+  }
+}
