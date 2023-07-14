@@ -1,4 +1,5 @@
 /** @type {import('eslint').Linter.Config} */
+// eslint-disable-next-line unicorn/no-empty-file
 module.exports = {
   root: true,
   env: {
@@ -25,7 +26,7 @@ module.exports = {
         extensions: ['.js', '.ts', '.tsx', '.jsx'],
       },
       alias: {
-        map: [['~', './app/']],
+        map: [['~', './src/']],
         extensions: ['.js', '.ts', '.tsx', '.jsx'],
       },
     },
@@ -41,7 +42,7 @@ module.exports = {
     'testing-library',
   ],
   extends: [
-    'next/core-web-vitals',
+    // 'next/core-web-vitals',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
@@ -85,6 +86,13 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'error',
     // empty functions are helpful for defining default values
     '@typescript-eslint/no-empty-function': 'off',
+    'import/order': [
+      'warn',
+      {
+        'newlines-between': 'always',
+      },
+    ],
+    'react/prop-types': 'off',
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/text-encoding-identifier-case': 'off',
     'unicorn/no-useless-undefined': ['error', { checkArguments: false }],
@@ -98,12 +106,6 @@ module.exports = {
       },
     ],
     'unicorn/no-null': 'off',
-    'import/order': [
-      'warn',
-      {
-        'newlines-between': 'always',
-      },
-    ],
     'unicorn/prevent-abbreviations': [
       'error',
       {
@@ -117,6 +119,5 @@ module.exports = {
         },
       },
     ],
-    'react/prop-types': 'off',
   },
 }
