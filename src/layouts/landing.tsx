@@ -3,8 +3,13 @@ import { classNames } from 'primereact/utils'
 import { LayoutBaseProps } from '.'
 
 import { background } from '~/assets/images'
+import { NavigationBar } from '~/components/navigation-bar'
 
-export function LandingLayout({ children, className }: LayoutBaseProps) {
+export function LandingLayout({
+  children,
+  className,
+  contentClassName,
+}: LayoutBaseProps) {
   return (
     <div
       className={classNames(className)}
@@ -13,7 +18,11 @@ export function LandingLayout({ children, className }: LayoutBaseProps) {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <main className="flex flex-column gap-8">{children}</main>
+      <NavigationBar />
+
+      <main className={classNames(contentClassName, 'flex flex-column gap-8')}>
+        {children}
+      </main>
     </div>
   )
 }

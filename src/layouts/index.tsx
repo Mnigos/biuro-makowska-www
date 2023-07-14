@@ -8,21 +8,32 @@ export enum LayoutType {
   LANDING = 'landing',
 }
 
-export type LayoutBaseProps = HTMLAttributes<HTMLDivElement>
+export interface LayoutBaseProps extends HTMLAttributes<HTMLDivElement> {
+  contentClassName?: string
+}
 
 export interface LayoutProps extends LayoutBaseProps {
   type: LayoutType
 }
 
 export function Layout({ type, children }: LayoutProps) {
-  const classes = 'px-6 surface-ground'
+  const classes = 'surface-ground'
+  const contentClasses = 'px-6'
 
   switch (type) {
     case LayoutType.DEFAULT: {
-      return <DefaultLayout className={classes}>{children}</DefaultLayout>
+      return (
+        <DefaultLayout className={classes} contentClassName={contentClasses}>
+          {children}
+        </DefaultLayout>
+      )
     }
     case LayoutType.LANDING: {
-      return <LandingLayout className={classes}>{children}</LandingLayout>
+      return (
+        <LandingLayout className={classes} contentClassName={contentClasses}>
+          {children}
+        </LandingLayout>
+      )
     }
   }
 }
