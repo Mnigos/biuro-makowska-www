@@ -42,7 +42,7 @@ module.exports = {
     'testing-library',
   ],
   extends: [
-    // 'next/core-web-vitals',
+    'plugin:@next/next/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
