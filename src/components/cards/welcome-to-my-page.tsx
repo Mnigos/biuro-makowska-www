@@ -7,7 +7,7 @@ import { useWelcomeToMyPage } from '~/hooks/api'
 export function WelcomeToMyPageCard() {
   const { data } = useWelcomeToMyPage()
 
-  if (!data || !instanceOfLandingPage(data)) return
+  if (!data || !instanceOfLandingPage(data)) return null
 
   return (
     <Card title={data.header}>
