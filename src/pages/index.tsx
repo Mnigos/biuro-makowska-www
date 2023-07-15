@@ -29,21 +29,18 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
 export default function Home() {
   return (
     <>
-      <div
-        className="flex flex-column lg:flex-row md:justify-content-around lg:justify-content-between align-items-center"
-        style={{ minHeight: '70vh' }}
-      >
+      <section className="flex flex-column lg:flex-row md:justify-content-around align-items-center min-h-screen">
         <Image
           src={biuroMakowskaLogo}
           alt="Biuro Makowska's logo"
-          style={{ objectFit: 'contain' }}
-          className="max-w-full"
+          style={{ objectFit: 'contain', backdropFilter: 'blur(2px)' }}
+          className="max-w-full border-round-lg"
         />
 
         <WelcomeToMyPageCard />
-      </div>
+      </section>
 
-      <div className="flex flex-column lg:flex-row justify-content-between align-items-center gap-4">
+      <section className="flex flex-column lg:flex-row justify-content-around align-items-center gap-4">
         <AboutCompanyCard />
 
         <Image
@@ -52,7 +49,7 @@ export default function Home() {
           style={{ objectFit: 'contain' }}
           className="w-full md:w-4 lg:w-4"
         />
-      </div>
+      </section>
     </>
   )
 }
