@@ -8,7 +8,7 @@
     "*.jsx": "$(capture).jsx.map, $(capture).*.tsx, $(capture).*.jsx, $(capture).*.ts, $(capture).*.js",
     "*.tsx": "$(capture).tsx.map, $(capture).*.tsx, $(capture).*.jsx, $(capture).*.ts, $(capture).*.js",
     "tsconfig.json": "tsconfig.*.json",
-    ".gitignore": ".gitmodules",
+    ".gitignore": ".gitmodules, .gitattributes",
     ".prettierrc": ".prettierignore",
     ".stylelintrc": ".stylelintignore",
     ".env": ".env.*",
