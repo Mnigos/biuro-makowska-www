@@ -1,6 +1,6 @@
 import { describe, test } from 'vitest'
 
-import { LandingPageResponse } from '../types'
+import { LandingPage, LandingPageResponse } from '../types'
 
 import { adaptLandingPageResponse } from './landing-page-response'
 
@@ -23,7 +23,7 @@ describe('adaptLandingPageResponse', () => {
       meta: {},
     }
 
-    const adapted = {
+    const adapted: LandingPage = {
       id: 2,
       header: 'Welcome to my page',
       content: 'This is my page',
