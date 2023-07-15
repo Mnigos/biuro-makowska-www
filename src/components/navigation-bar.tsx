@@ -1,18 +1,28 @@
 import { useRouter } from 'next/router'
 import { TabMenu } from 'primereact/tabmenu'
+import { Menu } from 'primereact/menu'
+import { Sidebar } from 'primereact/sidebar'
+import { Button } from 'primereact/button'
+// eslint-disable-next-line import/no-unresolved
+import { MenuItem } from 'primereact/menuitem'
+import { useState } from 'react'
 
 export function NavigationBar() {
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false)
+
   const router = useRouter()
 
-  const pages = [
+  const pages: (MenuItem & { page: string })[] = [
     {
       label: 'Strona Główna',
       icon: 'pi pi-fw pi-home',
+      page: '/',
       command: () => router.push('/'),
     },
     {
       label: 'Cennik',
       icon: 'pi pi-fw pi-money-bill',
+      page: '/cenik',
       command: () => router.push('/cennik'),
     },
   ]
@@ -26,13 +36,39 @@ export function NavigationBar() {
       <nav className="align-items-center flex gap-2">
         <TabMenu
           model={pages}
-          className="h-full"
+          activeIndex={pages.findIndex(({ page }) => page === router.pathname)}
+          className="h-full hidden md:block"
           pt={{
             menu: {
               className: 'h-full',
             },
           }}
         />
+
+        <div className="block md:hidden">
+          <Sidebar
+            position="right"
+            icons={
+              <p className="text-2xl p-component w-full">Biuro Makowska</p>
+            }
+            pt={{
+              header: {
+                className: 'py-0',
+              },
+            }}
+            visible={isSidebarVisible}
+            onHide={() => setIsSidebarVisible(false)}
+          >
+            <Menu model={pages} className="w-full surface-overlay" />
+          </Sidebar>
+
+          <Button
+            icon="pi pi-bars"
+            className="border-round-lg"
+            onClick={() => setIsSidebarVisible(true)}
+            outlined
+          />
+        </div>
       </nav>
     </header>
   )
