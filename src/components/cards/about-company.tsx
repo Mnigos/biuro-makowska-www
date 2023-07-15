@@ -7,7 +7,7 @@ import { instanceOfLandingPage } from '~/api/utils'
 export function AboutCompanyCard() {
   const { data } = useAboutCompany()
 
-  if (!data || !instanceOfLandingPage(data)) return
+  if (!data || !instanceOfLandingPage(data)) return null
 
   return (
     <Card title={data.header}>
