@@ -18,7 +18,7 @@ export interface LayoutProps extends LayoutBaseProps {
 
 export function Layout({ type, children }: LayoutProps) {
   const classes = 'surface-ground'
-  const contentClasses = 'px-6'
+  const contentClasses = 'px-4 md:px-6'
 
   switch (type) {
     case LayoutType.DEFAULT: {
