@@ -11,6 +11,9 @@ export const cardPassThrough: CardPassThroughOptions = {
     className: 'py-1',
   },
   root: {
-    className: 'border-round-lg ssurface-section',
+    className: 'border-round-lg',
+    style: {
+      backgroundColor: 'rgb(30, 30, 30, 0.98)',
+    },
   },
 }
