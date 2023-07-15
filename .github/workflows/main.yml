@@ -18,7 +18,7 @@ jobs:
       - name: Setup node env 🏗
         uses: actions/setup-node@v3.1.1
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 18.12.0
 
       - name: Get yarn cache directory path 🛠
         id: yarn-cache-dir-path
@@ -38,6 +38,8 @@ jobs:
 
       - name: Build Application 🧱
         run: yarn build
+        env:
+          NEXT_PUBLIC_STRAPI_API_URL: ${{ secrets.NEXT_PUBLIC_STRAPI_API_URL }}
 
   lint:
     name: 'Lint 🐱'
