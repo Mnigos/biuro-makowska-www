@@ -1,7 +1,8 @@
 import { HTMLAttributes } from 'react'
 
-import { DefaultLayout } from './default'
-import { LandingLayout } from './landing'
+import { NavigationBar } from '~/components/navigation-bar'
+import { Footer } from '~/components/footer'
+import { background } from '~/assets/images'
 
 export enum LayoutType {
   DEFAULT = 'default',
@@ -17,26 +18,21 @@ export interface LayoutProps extends LayoutBaseProps {
 }
 
 export function Layout({ type, children }: LayoutProps) {
-  const classes = 'surface-ground'
-  const contentClasses = 'px-4 md:px-6'
+  const style =
+    type === LayoutType.LANDING
+      ? {
+          backgroundImage: `url(${background.src})`,
+          backgroundRepeat: 'no-repeat',
+        }
+      : undefined
 
-  switch (type) {
-    case LayoutType.DEFAULT: {
-      return (
-        <DefaultLayout className={classes} contentClassName={contentClasses}>
-          {children}
-        </DefaultLayout>
-      )
-    }
-    case LayoutType.LANDING: {
-      return (
-        <LandingLayout className={classes} contentClassName={contentClasses}>
-          {children}
-        </LandingLayout>
-      )
-    }
-  }
+  return (
+    <div className="surface-ground" style={style}>
+      <NavigationBar />
+
+      <main className="flex flex-column gap-8 px-4 md:px-6">{children}</main>
+
+      <Footer style={{ margin: '16rem 0px 2rem 0px' }} />
+    </div>
+  )
 }
-
-export * from './default'
-export * from './landing'
