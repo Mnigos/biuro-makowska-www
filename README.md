@@ -1,38 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Biuro Makowska WWW
 
-## Getting Started
+[![ci](https://github.com/Mnigos/biuro-makowska-www/actions/workflows/main.yml/badge.svg)](https://github.com/Mnigos/biuro-makowska-www/actions/workflows/main.yml)
+[![codecov](https://codecov.io/gh/Mnigos/biuro-makowska-www/branch/main/graph/badge.svg?token=eVOzsS0pRd)](https://codecov.io/gh/Mnigos/biuro-makowska-www)
+![GitHub](https://img.shields.io/github/license/Mnigos/biuro-makowska-www)
 
-First, run the development server:
+## Deployment
+
+- [Production](https://biuro-makowska.vercel.app)
+
+## Related Repositories
+
+- [biuro-makowska-strapi](https://github.com/Mnigos/biuro-makowska-strapi)
+
+## Stack
+
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![Codecov](https://img.shields.io/badge/codecov-%23ff0077.svg?style=for-the-badge&logo=codecov&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![NextJS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![React Query](https://img.shields.io/badge/-React%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white)
+![Strapi](https://img.shields.io/badge/strapi-%232E7EEA.svg?style=for-the-badge&logo=strapi&logoColor=white)
+
+![Testing Library](https://img.shields.io/badge/testing%20library-323330?style=for-the-badge&logo=testing-library&logoColor=red)
+
+![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)
+![ESLint](https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white)
+![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)
+![EditorConfig](https://img.shields.io/badge/Editor%20Config-E0EFEF?style=for-the-badge&logo=editorconfig&logoColor=000)
+
+![Commitlint](https://img.shields.io/badge/commitlint-000000.svg?style=for-the-badge&logo=commitlint&logoColor=white)
+![ConventionalCommits](https://img.shields.io/badge/Conventional%20Commits-FE5196.svg?style=for-the-badge&logo=Conventional-Commits&logoColor=white)
+
+## Usage
+
+### Setup
+
+Make sure to have installed right version of Node.js in nvm
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+nvm use
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Don't forget to install the dependencies:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Running the app
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+# Build app
+yarn build
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Run app
+yarn start
 
-## Learn More
+# Run app in watch mode
+yarn dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Test
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# unit tests
+yarn run test
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# unit tests in watch mode
+yarn run test:watch
 
-## Deploy on Vercel
+# Runing tests in coverage mode
+yarn test:coverage
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Biuro Makowska is [MIT licensed](LICENSE).
