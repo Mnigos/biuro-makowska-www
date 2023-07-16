@@ -64,6 +64,7 @@ export function NavigationBar() {
 
           <Button
             icon="pi pi-bars"
+            aria-label="Otwórz menu"
             className="border-round-lg"
             onClick={() => setIsSidebarVisible(true)}
             outlined
