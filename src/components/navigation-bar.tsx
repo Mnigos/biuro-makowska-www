@@ -22,7 +22,7 @@ export function NavigationBar() {
     {
       label: 'Cennik',
       icon: 'pi pi-fw pi-money-bill',
-      page: '/cenik',
+      page: '/cennik',
       command: () => router.push('/cennik'),
     },
   ]
