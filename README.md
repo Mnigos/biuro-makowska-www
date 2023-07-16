@@ -6,7 +6,7 @@
 
 ## Deployment
 
-- [Production](https://biuro-makowska.vercel.app)
+- [Production](https://biuro-makowskaj.pl)
 
 ## Related Repositories
 
