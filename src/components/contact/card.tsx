@@ -12,7 +12,7 @@ export function ContactCard() {
 
   return (
     <Card
-      title="Contact"
+      title="Kontakt"
       pt={{
         ...cardPassThrough,
         content: {
