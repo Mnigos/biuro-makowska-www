@@ -27,10 +27,18 @@ export function Layout({ type, children }: LayoutProps) {
       : undefined
 
   return (
-    <div className="surface-ground" style={style}>
+    <div
+      className="surface-ground flex flex-column align-items-stretch"
+      style={style}
+    >
       <NavigationBar />
 
-      <main className="flex flex-column gap-8 px-4 md:px-6">{children}</main>
+      <main
+        className="flex flex-column gap-8 px-4 md:px-6 align-self-center"
+        style={{ maxWidth: '1580px' }}
+      >
+        {children}
+      </main>
 
       <Footer style={{ margin: '16rem 0px 2rem 0px' }} />
     </div>
