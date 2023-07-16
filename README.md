@@ -2,7 +2,7 @@
 
 ## Description
 
-Website for website for accounting office Joanna Makowska.
+Website for  accounting office Joanna Makowska.
 
 [![ci](https://github.com/Mnigos/biuro-makowska-www/actions/workflows/main.yml/badge.svg)](https://github.com/Mnigos/biuro-makowska-www/actions/workflows/main.yml)
 [![codecov](https://codecov.io/gh/Mnigos/biuro-makowska-www/branch/main/graph/badge.svg?token=eVOzsS0pRd)](https://codecov.io/gh/Mnigos/biuro-makowska-www)
