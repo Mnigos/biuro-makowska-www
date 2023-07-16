@@ -7,12 +7,10 @@ import { PageProps } from './_app'
 import { biuroMakowskaLogo, kibrLogo } from '~/assets/images'
 import { LayoutType } from '~/layouts'
 import { getAboutCompany, getContact, getWelcomeToMyPage } from '~/api/fetchers'
-import {
-  AboutCompanyCard,
-  ContactCard,
-  WelcomeToMyPageCard,
-} from '~/components/cards'
 import { ABOUT_COMPANY, WELCOME_TO_MY_PAGE } from '~/api/constants'
+import { WelcomeToMyPageCard } from '~/components/welcome-to-my-page-card'
+import { AboutCompanyCard } from '~/components/about-company-card'
+import { ContactCard } from '~/components/contact'
 
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
   const queryClient = new QueryClient()

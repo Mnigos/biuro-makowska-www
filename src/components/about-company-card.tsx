@@ -1,8 +1,7 @@
 import { Card } from 'primereact/card'
 import ReactMarkdown from 'react-markdown'
 
-import { cardPassThrough } from '.'
-
+import { cardPassThrough } from '~/common/card-pass-through'
 import { useAboutCompany } from '~/hooks/api'
 
 export function AboutCompanyCard() {
