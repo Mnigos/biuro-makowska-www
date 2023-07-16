@@ -15,10 +15,8 @@ import { ContactCard } from '~/components/contact'
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
   const queryClient = new QueryClient()
 
-  await queryClient.prefetchQuery([ABOUT_COMPANY], () => getAboutCompany())
-  await queryClient.prefetchQuery([WELCOME_TO_MY_PAGE], () =>
-    getWelcomeToMyPage()
-  )
+  await queryClient.prefetchQuery([ABOUT_COMPANY], getAboutCompany)
+  await queryClient.prefetchQuery([WELCOME_TO_MY_PAGE], getWelcomeToMyPage)
 
   return {
     props: {
