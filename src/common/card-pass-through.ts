@@ -14,7 +14,3 @@ export const cardPassThrough: CardPassThroughOptions = {
     },
   },
 }
-
-export * from './about-company'
-export * from './welcome-to-my-page'
-export * from './contact'
