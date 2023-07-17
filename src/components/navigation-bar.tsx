@@ -20,6 +20,12 @@ export function NavigationBar() {
       command: () => router.push('/'),
     },
     {
+      label: 'Kontakt',
+      icon: 'pi pi-fw pi-phone',
+      page: '/kontakt',
+      command: () => router.push('/kontakt'),
+    },
+    {
       label: 'Cennik',
       icon: 'pi pi-fw pi-money-bill',
       page: '/cennik',
