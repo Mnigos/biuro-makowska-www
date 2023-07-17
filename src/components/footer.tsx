@@ -11,7 +11,7 @@ export function Footer({
       <Divider className="surface-100" style={{ height: '1px' }} />
 
       <p className="p-component w-full text-center">
-        Igor Makowski &copy; {new Date().getFullYear()}
+        Igor Makowski {new Date().getFullYear()} &copy; All right reserved
       </p>
     </footer>
   )
