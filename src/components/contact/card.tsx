@@ -1,9 +1,11 @@
 import { Card } from 'primereact/card'
+import Image from 'next/image'
 
 import { ContactLink } from './link'
 
 import { cardPassThrough } from '~/common/card-pass-through'
 import { useContact } from '~/hooks/api'
+import { joannaMakowskaPhoto } from '~/assets/images'
 
 export function ContactCard() {
   const { data } = useContact()
@@ -13,6 +15,18 @@ export function ContactCard() {
   return (
     <Card
       title="Kontakt"
+      header={
+        <Image
+          src={joannaMakowskaPhoto}
+          alt="Joanna Makowska's photo"
+          style={{
+            height: '20%',
+            borderTopLeftRadius: '0.5rem',
+            borderTopRightRadius: '0.5rem',
+          }}
+          className="h-5"
+        />
+      }
       pt={{
         ...cardPassThrough,
         content: {
