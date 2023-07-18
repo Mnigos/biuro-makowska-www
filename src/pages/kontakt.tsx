@@ -4,9 +4,9 @@ import { Fieldset } from 'primereact/fieldset'
 import {
   biuroMakowskaOfficeInside,
   biuroMakowskaOfficeOutside,
-  joannaMakowskaPhoto,
 } from '~/assets/images'
 import { ContactCard } from '~/components/contact'
+import { ContactForm } from '~/components/contact/form'
 
 export default function Kontakt() {
   return (
@@ -41,16 +41,10 @@ export default function Kontakt() {
         </div>
       </section>
 
-      <section className="flex justify-content-around align-items-stretch md:align-items-center md:flex-row gap-4 md:gap-8">
-        <div className="flex flex-column-reverse justify-content-around align-items-stretch md:align-items-center md:flex-row gap-4 md:gap-8">
-          <ContactCard />
+      <section className="flex flex-column md:flex-row justify-content-between align-items-stretch md:align-items-center md:flex-row gap-4 md:gap-8">
+        <ContactCard />
 
-          <Image
-            src={joannaMakowskaPhoto}
-            alt="Joanna Makowska's photo"
-            className="w-full h-auto md:w-3 border-round-lg shadow-6"
-          />
-        </div>
+        <ContactForm />
       </section>
     </>
   )
