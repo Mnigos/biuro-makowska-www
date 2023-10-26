@@ -25,12 +25,12 @@ export function NavigationBar() {
       page: '/kontakt',
       command: () => router.push('/kontakt'),
     },
-    {
-      label: 'Cennik',
-      icon: 'pi pi-fw pi-money-bill',
-      page: '/cennik',
-      command: () => router.push('/cennik'),
-    },
+    // {
+    //   label: 'Cennik',
+    //   icon: 'pi pi-fw pi-money-bill',
+    //   page: '/cennik',
+    //   command: () => router.push('/cennik'),
+    // },
   ]
 
   return (
