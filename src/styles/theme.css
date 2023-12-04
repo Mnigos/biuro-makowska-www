@@ -1,5 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/roboto-3?styles=80727,80725,80720');
 
+p {
+  margin: 0;
+}
+
 :root {
   --surface-a: #1e1e1e;
   --surface-b: #121212;
